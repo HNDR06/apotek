@@ -1,0 +1,12 @@
+1. download , install dan jalankan xampp untuk php versi 7.2/7.3
+2. misal diinstall di windows, maka htdocs di c:\xampp\htdocs
+3. kopikan folder pharmacare ke c:\xampp\htdocs
+4. install dengan akses localhost\pharmacare\install
+5. untuk code ada pada file code.txt
+6. Setelah terinstall delete tabel language dan import file language.sql untuk menggunakan bahasa indonesia
+ 
+
+
+
+
+ 
