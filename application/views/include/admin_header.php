@@ -25,7 +25,7 @@
     </a>
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top text-center">
-
+        
         <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> <!-- Sidebar toggle button-->
             <span class="sr-only"><?php echo display('toggle_navigation')?></span>
 

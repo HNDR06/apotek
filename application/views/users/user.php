@@ -104,11 +104,13 @@
 											<?php echo form_open()?>
 												<a href="<?php echo base_url('User/user_update_form/'.$user["user_id"]); ?>" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="left" title="" data-original-title="<?php echo display('update') ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
 												<?php
-													if ($user["user_type"] != 1) {
+												 $role = ($user["user_type"] == 1) ? "Admin" : "User";
+												 $delete_msg = 'Are you sure you want to delete this '. $user["first_name"] . ' ' . $user["last_name"] . ' (' . $role . ')?';
+													// if ($user["user_type"] != 1) { // // Admin can be deleted
 												?>
-												<a href="<?php echo base_url('User/user_delete/'.$user["user_id"])?>" class="btn btn-danger btn-sm"  data-toggle="tooltip" onclick="return confirm('Are you Sure ?')" data-placement="right" title="" data-original-title="<?php echo display('delete') ?> "><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+												<a href="<?php echo base_url('User/user_delete/'.$user["user_id"])?>" class="btn btn-danger btn-sm"  data-toggle="tooltip" onclick="return confirm('<?php echo $delete_msg ?>')" data-placement="right" title="" data-original-title="<?php echo display('delete') ?> "><i class="fa fa-trash-o" aria-hidden="true"></i></a>
 												<?php
-													}
+													// }
 												?>
 											<?php echo form_close()?>
 											</center>

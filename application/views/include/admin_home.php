@@ -14,6 +14,11 @@
             </ol>
         </div>
     </section>
+
+    <?php 
+    // Add check for user type before showing report section
+    if($this->session->userdata('user_type') == '1') {
+    ?>
     <!-- Main content -->
     <section class="content">
               <?php 
@@ -294,6 +299,7 @@ $searchdate =(!empty($postdate)?$postdate:date('F Y'));
         </div>
 
     </section> <!-- /.content -->
+    <?php } ?>
 
      <?php if($this->session->userdata('user_type') == '1')
      {

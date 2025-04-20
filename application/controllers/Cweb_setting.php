@@ -39,8 +39,8 @@ class Cweb_setting extends CI_Controller {
             $config['source_image']   = $logo;
             $config['create_thumb']   = false;
             $config['maintain_ratio'] = TRUE;
-            $config['width']          = 150;
-            $config['height']         = 150;
+            $config['width']          = "*";
+            $config['height']         = "*";
             $this->load->library('image_lib', $config);
             $this->image_lib->resize();
             $logo = base_url() . $logo;
