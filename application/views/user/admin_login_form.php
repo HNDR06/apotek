@@ -1,5 +1,6 @@
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <!-- Admin login area start-->
+<div class="login-bg">
 <div class="container-center">
     <!-- Alert Message -->
     <?php
@@ -103,6 +104,7 @@
        <?php echo form_close() ?>
     </div>
   </div>
+</div>
 </div>
 
 

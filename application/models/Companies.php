@@ -21,6 +21,19 @@ class Companies extends CI_Model {
 		}
 		return false;
 	}
+	
+	#=============Company List Only show 1=============#	
+	public function company_list1()
+	{
+		$this->db->select('*');
+		$this->db->from('company_information');
+		$this->db->limit(1);
+		$query = $this->db->get();
+		if ($query->num_rows() > 0) {
+			return $query->result_array();	
+		}
+		return false;
+	}
 	#==============Company search list==============#
 	public function company_search_item($company_id)
 	{

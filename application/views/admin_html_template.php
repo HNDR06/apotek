@@ -15,7 +15,7 @@
 
         <!-- Favicon and touch icons -->
         <link rel="shortcut icon" href="<?php
-        if (isset($Web_settings[0]['logo'])) {
+        if (isset($Web_settings[0]['favicon'])) {
             echo $Web_settings[0]['favicon'];
         }
         ?>" type="image/x-icon">

@@ -3,25 +3,28 @@
     $CI->load->model('Web_settings');
     $CI->load->model('Reports');
     $CI->load->model('Users');
+    $CI->load->model('Companies');
 
     $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
     $users = $CI->Users->profile_edit_data();
     $out_of_stock = $CI->Reports->out_of_stock_count();
     $out_of_date  = $CI->Reports->out_of_date_count();
+    $Companies = $CI->Companies->company_list1();
 ?>
 <!-- Admin header end -->
 <header class="main-header" id="main-heades">
     <a href="<?php echo base_url()?>" class="logo"> <!-- Logo -->
         <span class="logo-mini">
             
-            <img src="<?php if (isset($Web_settings[0]['favicon'])) {
-               echo $Web_settings[0]['favicon']; }?>" alt="">
+        <img src="<?php if (isset($Web_settings[0]['logo'])) {
+               echo $Web_settings[0]['logo']; }?>" alt="" style="position: absolute ; left: 15px ; top: 15px;width: 30px;height: 30px;">    
         </span>
         <span class="logo-lg">
             
             <img src="<?php if (isset($Web_settings[0]['logo'])) {
-               echo $Web_settings[0]['logo']; }?>" alt="">
-        </span>
+               echo $Web_settings[0]['logo']; }?>" alt="" style="position: absolute ; left: 15px ; top: 15px;width: 30px;height: 30px;">
+            <b><?php echo html_escape($Companies[0]['company_name'])?></b>
+         </span>
     </a>
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top text-center">
@@ -67,8 +70,10 @@
             <ul class="nav navbar-nav">
                    <li class="dropdown notifications-menu">
                     <a href="<?php echo base_url('Creport/out_of_date')?>" >
-                        <i class="fa fa-bell-o"></i>
+                        <i class="fa fa-bell-o" title="<?php echo display('out_of_date')?>"></i>
                         <span class="label label-danger"><?php echo html_escape($out_of_date)?></span>
+                        
+                        
                     </a>
                 </li>
                 <li class="dropdown notifications-menu">
@@ -79,7 +84,7 @@
                 </li>
                 <!-- settings -->
                 <li class="dropdown dropdown-user">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="pe-7s-settings"></i></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="pe-7s-user"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo base_url('Admin_dashboard/edit_profile')?>"><i class="pe-7s-users"></i><?php echo display('user_profile') ?></a></li>
                         <li><a href="<?php echo base_url('Admin_dashboard/change_password_form')?>"><i class="pe-7s-settings"></i><?php echo display('change_password') ?></a></li>

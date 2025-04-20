@@ -896,6 +896,16 @@ font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif !importan
     -webkit-animation: right-spin 1333ms cubic-bezier(.4, 0, .2, 1) infinite both;
     animation: right-spin 1333ms cubic-bezier(.4, 0, .2, 1) infinite both;
 }
+.login-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('../images/login-bg.png') no-repeat center center fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @-webkit-keyframes container-rotate {
     to {

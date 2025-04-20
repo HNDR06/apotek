@@ -5,8 +5,12 @@
 ?>
 <footer class="main-footer" id="main-footer">
     <strong>
-    	<?php if (isset($Web_settings[0]['footer_text'])) { echo $Web_settings[0]['footer_text']; }?>
-   	</strong><i class="fa fa-heart color-green"></i>
+<a href="https://alfazza.my.id/" target="_blank">Alfazza Solusi Indonesia</a> &copy;<?php echo date('Y'); ?> All Rights Reserved.
+    	<?php 
+      // if (isset($Web_settings[0]['footer_text'])) { echo $Web_settings[0]['footer_text']; }
+      ?>
+   	</strong>
+    <!-- <i class="fa fa-heart color-green"></i> -->
    	 <input type ="hidden" name="csrf_test_name" id="csrf_test_name" value="<?php echo $this->security->get_csrf_hash();?>">
    	   <input type ="hidden" name="base_url" id="base_url" value="<?php echo base_url();?>">
 </footer>

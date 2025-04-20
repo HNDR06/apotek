@@ -130,12 +130,12 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                             <label for="footer_text" class="col-sm-3 col-form-label"><?php echo display('footer_text') ?> <i class="text-danger">*</i></label>
                             <div class="col-sm-6">
-                                <input class="form-control" name ="footer_text" id="footer_text" type="text" placeholder="Foter Text" value="{footer_text}" tabindex="7">
+                                <input class="form-control" name ="footer_text" id="footer_text" type="text" placeholder="Foter Text" value="Alfazza Solusi Indonesia" tabindex="7">
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group row">
                             <label for="language" class="col-sm-3 col-form-label"><?php echo display('language') ?> <i class="text-danger">*</i></label>

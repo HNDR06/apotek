@@ -1,3 +1,8 @@
+<?php
+$CI =& get_instance();
+$CI->load->model('Users');
+$users = $CI->Users->profile_edit_data();
+?>
 <!-- Admin Home Start -->
  <div class="content-wrapper">
     <!-- Content Header(Page header)-->
@@ -6,7 +11,10 @@
             <i class="pe-7s-world"></i>
         </div>
         <div class="header-title">
-            <h1><?php echo display('dashboard')?></h1>
+            <h1><?php 
+            $user_info = $this->session->userdata();
+            echo 'Welcome, ' . $users[0]['first_name'] . ' ' .$users[0]['last_name'].' !'; 
+            ?></h1>
             <small><?php echo display('home')?></small>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="pe-7s-home"></i> <?php echo display('home')?></a></li>
